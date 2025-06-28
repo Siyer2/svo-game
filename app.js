@@ -29,7 +29,15 @@ let subjects = [], verbs = [], objects = [];
 function updateWordBank() {
   wordBankEl.innerHTML = '';
   let words = stage === 0 ? subjects : stage === 1 ? verbs : objects;
-  shuffle([...words]).forEach(word => {
+  const entry = currentEntry();
+  const correctWord = stage === 0 ? entry.subject.text : stage === 1 ? entry.verb.text : entry.object.text;
+
+  // Get 4 random words (excluding the correct one) + the correct word
+  const otherWords = words.filter(word => word !== correctWord);
+  const randomWords = shuffle([...otherWords]).slice(0, 4);
+  const wordsToShow = shuffle([...randomWords, correctWord]);
+
+  wordsToShow.forEach(word => {
     const btn = document.createElement('button');
     btn.textContent = word;
     btn.addEventListener('click', () => handleSelect(word));
@@ -50,20 +58,26 @@ function updateImage() {
 function revealSentence() {
   const entry = currentEntry();
   const fs = entry.fullSentence;
-  let revealIndex = 0;
-  if (stage > 0) {
-    const sIdx = fs.toLowerCase().indexOf(entry.subject.text.toLowerCase());
-    revealIndex = sIdx + entry.subject.text.length;
-    if (stage > 1) {
-      const vIdx = fs.toLowerCase().indexOf(entry.verb.text.toLowerCase(), revealIndex);
-      revealIndex = vIdx + entry.verb.text.length;
-      if (stage > 2) {
-        const oIdx = fs.toLowerCase().indexOf(entry.object.text.toLowerCase(), revealIndex);
-        revealIndex = fs.length; // show full sentence when completed
-      }
-    }
+
+  // Create sentence with blanks for unguessed words
+  let displaySentence = fs;
+
+  if (stage === 0) {
+    // Haven't guessed subject yet - show blank for subject
+    displaySentence = displaySentence.replace(new RegExp(entry.subject.text, 'gi'), '_____');
+    displaySentence = displaySentence.replace(new RegExp(entry.verb.text, 'gi'), '_____');
+    displaySentence = displaySentence.replace(new RegExp(entry.object.text, 'gi'), '_____');
+  } else if (stage === 1) {
+    // Subject guessed, show subject but blank for verb and object
+    displaySentence = displaySentence.replace(new RegExp(entry.verb.text, 'gi'), '_____');
+    displaySentence = displaySentence.replace(new RegExp(entry.object.text, 'gi'), '_____');
+  } else if (stage === 2) {
+    // Subject and verb guessed, show them but blank for object
+    displaySentence = displaySentence.replace(new RegExp(entry.object.text, 'gi'), '_____');
   }
-  sentenceEl.textContent = fs.slice(0, revealIndex);
+  // If stage > 2, show full sentence (already handled in handleSelect)
+
+  sentenceEl.textContent = displaySentence;
 }
 
 function handleSelect(word) {
