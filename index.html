@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVO Game</title>
+<style>
+  body { font-family: Arial, sans-serif; margin:0; padding:0; }
+  #container { display: flex; height: 100vh; }
+  #word-bank { width: 33%; overflow-y: auto; background:#f0f0f0; padding:10px; box-sizing:border-box; }
+  #word-bank button { display:block; width:100%; margin:5px 0; padding:10px; font-size:1.2em; }
+  #media-area { flex-grow:1; text-align:center; padding:10px; box-sizing:border-box; }
+  #media-area img { max-width:100%; max-height:70vh; }
+  #sentence { margin-top:20px; font-size:1.5em; min-height:2em; }
+</style>
+</head>
+<body>
+<div id="container">
+  <div id="word-bank"></div>
+  <div id="media-area">
+    <img id="word-image" src="" alt="" />
+    <div id="sentence"></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
