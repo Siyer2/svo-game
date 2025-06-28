@@ -6,21 +6,25 @@
 <title>SVO Game</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     margin: 0;
     padding: 0;
-    background: #fef6e4;
+    background: linear-gradient(135deg, #ffd9e8, #d9eaff, #d8fdd7);
   }
 
   #container {
     display: flex;
     height: 100vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 10px;
   }
 
   #word-bank {
     width: 33%;
     overflow-y: auto;
-    background: #fff1e6;
+    background: linear-gradient(to bottom, #e0c3fc, #f9c2ff);
     padding: 10px;
     box-sizing: border-box;
   }
@@ -33,8 +37,14 @@
     font-size: 1.2em;
     background: #ffd966;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  #word-bank button:hover {
+    transform: translateY(-5px);
   }
 
   #media-area {
@@ -42,7 +52,7 @@
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
-    background: #d0f4de;
+    background: rgba(255,255,255,0.7);
   }
 
   #media-area img {
@@ -63,13 +73,13 @@
   }
 
   .correct {
-    animation: pop 0.5s ease;
-    background-color: #d4edda !important;
+    animation: celebrate 0.8s ease;
+    background-color: #8ef58e !important;
   }
 
   .wrong {
-    animation: shake 0.5s ease;
-    background-color: #f8d7da !important;
+    animation: gentle-shake 0.4s ease;
+    background-color: #ffd1dc !important;
   }
 
   #feedback.positive {
@@ -86,18 +96,43 @@
     padding: 5px;
   }
 
-  @keyframes pop {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.3); }
+  #feedback.rainbow {
+    font-weight: bold;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow-shift 3s linear infinite;
+  }
+
+  @keyframes celebrate {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(10deg); }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+
+  @keyframes gentle-shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+  }
+
+  .reveal-bounce {
+    animation: bounceWord 0.6s ease;
+  }
+
+  @keyframes bounceWord {
+    0% { transform: scale(0.8); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
     100% { transform: scale(1); }
   }
 
-  @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
+  @keyframes rainbow-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
   }
 </style>
 </head>

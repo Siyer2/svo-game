@@ -22,18 +22,36 @@ const imgEl = document.getElementById('word-image');
 const sentenceEl = document.getElementById('sentence');
 const feedbackEl = document.getElementById('feedback');
 
+const positiveMessages = [
+  'Great job! \ud83c\udf1f',
+  'Awesome! \ud83c\udf89',
+  'Fantastic! \ud83c\udf8a'
+];
+
+const negativeMessages = [
+  'Try again! \ud83d\udc99',
+  'Keep going! \ud83c\udf1f',
+  'You can do it! \ud83d\udcaa'
+];
+
+function randomFrom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
 let data = [];
 let stage = 0; // 0 subject,1 verb,2 object
 let index = 0;
 let subjects = [], verbs = [], objects = [];
 
-function showFeedback(message, positive) {
+function showFeedback(message, style) {
   feedbackEl.textContent = message;
-  feedbackEl.className = positive ? 'positive' : 'negative';
-  setTimeout(() => {
-    feedbackEl.textContent = '';
-    feedbackEl.className = '';
-  }, 1000);
+  feedbackEl.className = style;
+  if (style !== 'rainbow') {
+    setTimeout(() => {
+      feedbackEl.textContent = '';
+      feedbackEl.className = '';
+    }, 1500);
+  }
 }
 
 function updateWordBank() {
@@ -95,28 +113,33 @@ function handleSelect(word, btn) {
   const expected = stage === 0 ? entry.subject.text : stage === 1 ? entry.verb.text : entry.object.text;
   if (word === expected) {
     btn.classList.add('correct');
-    showFeedback('Great job!', true);
-    setTimeout(() => btn.classList.remove('correct'), 500);
+    showFeedback(randomFrom(positiveMessages), 'positive');
+    setTimeout(() => btn.classList.remove('correct'), 800);
     stage++;
     if (stage > 2) {
       // completed this entry
       sentenceEl.textContent = entry.fullSentence;
+      sentenceEl.classList.add('reveal-bounce');
+      showFeedback('AMAZING! \ud83c\udf89\ud83c\udf1f', 'rainbow');
+      setTimeout(() => sentenceEl.classList.remove('reveal-bounce'), 600);
       setTimeout(() => {
         index = (index + 1) % data.length;
         stage = 0;
         updateImage();
         updateWordBank();
         revealSentence();
-      }, 1000);
+      }, 2000);
     } else {
       updateImage();
       updateWordBank();
       revealSentence();
+      sentenceEl.classList.add('reveal-bounce');
+      setTimeout(() => sentenceEl.classList.remove('reveal-bounce'), 600);
     }
   } else {
     btn.classList.add('wrong');
-    showFeedback('Try again!', false);
-    setTimeout(() => btn.classList.remove('wrong'), 500);
+    showFeedback(randomFrom(negativeMessages), 'negative');
+    setTimeout(() => btn.classList.remove('wrong'), 400);
   }
 }
 
