@@ -80,7 +80,7 @@ function currentEntry() {
 function updateImage() {
   const entry = currentEntry();
   const imgPath = stage === 0 ? entry.subject.mediaPath : stage === 1 ? entry.verb.mediaPath : entry.object.mediaPath;
-  imgEl.src = imgPath;
+  imgEl.src = imgPath + '?v=' + Date.now();
 }
 
 function revealSentence() {
