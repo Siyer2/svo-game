@@ -1,0 +1,182 @@
+[
+  { 
+    "subject": { "text": "cat", "mediaPath": "images/subjects/cat.jpg" }, 
+    "verb": { "text": "eats", "mediaPath": "videos/verbs/eats.mp4" }, 
+    "object": { "text": "fish", "mediaPath": "images/objects/fish.jpg" }, 
+    "fullSentence": "The cat eats fish." 
+  },
+  { 
+    "subject": { "text": "boy", "mediaPath": "images/subjects/boy.jpg" }, 
+    "verb": { "text": "kicks", "mediaPath": "videos/verbs/kicks.mp4" }, 
+    "object": { "text": "ball", "mediaPath": "images/objects/ball.jpg" }, 
+    "fullSentence": "The boy kicks the ball." 
+  },
+  { 
+    "subject": { "text": "girl", "mediaPath": "images/subjects/girl.jpg" }, 
+    "verb": { "text": "draws", "mediaPath": "videos/verbs/draws.mp4" }, 
+    "object": { "text": "picture", "mediaPath": "images/objects/picture.jpg" }, 
+    "fullSentence": "The girl draws a picture." 
+  },
+  { 
+    "subject": { "text": "mum", "mediaPath": "images/subjects/mum.jpg" }, 
+    "verb": { "text": "makes", "mediaPath": "videos/verbs/makes.mp4" }, 
+    "object": { "text": "cake", "mediaPath": "images/objects/cake.jpg" }, 
+    "fullSentence": "Mum makes a cake." 
+  },
+  { 
+    "subject": { "text": "dad", "mediaPath": "images/subjects/dad.jpg" }, 
+    "verb": { "text": "drives", "mediaPath": "videos/verbs/drives.mp4" }, 
+    "object": { "text": "car", "mediaPath": "images/objects/car.jpg" }, 
+    "fullSentence": "Dad drives a car." 
+  },
+  { 
+    "subject": { "text": "dog", "mediaPath": "images/subjects/dog.jpg" }, 
+    "verb": { "text": "chases", "mediaPath": "videos/verbs/chases.mp4" }, 
+    "object": { "text": "stick", "mediaPath": "images/objects/stick.jpg" }, 
+    "fullSentence": "The dog chases a stick." 
+  },
+  { 
+    "subject": { "text": "baby", "mediaPath": "images/subjects/baby.jpg" }, 
+    "verb": { "text": "drinks", "mediaPath": "videos/verbs/drinks.mp4" }, 
+    "object": { "text": "milk", "mediaPath": "images/objects/milk.jpg" }, 
+    "fullSentence": "The baby drinks milk." 
+  },
+  { 
+    "subject": { "text": "bird", "mediaPath": "images/subjects/bird.jpg" }, 
+    "verb": { "text": "sings", "mediaPath": "videos/verbs/sings.mp4" }, 
+    "object": { "text": "song", "mediaPath": "images/objects/song.jpg" }, 
+    "fullSentence": "The bird sings a song." 
+  },
+  { 
+    "subject": { "text": "frog", "mediaPath": "images/subjects/frog.jpg" }, 
+    "verb": { "text": "jumps", "mediaPath": "videos/verbs/jumps.mp4" }, 
+    "object": { "text": "rock", "mediaPath": "images/objects/rock.jpg" }, 
+    "fullSentence": "The frog jumps on the rock." 
+  },
+  { 
+    "subject": { "text": "clown", "mediaPath": "images/subjects/clown.jpg" }, 
+    "verb": { "text": "throws", "mediaPath": "videos/verbs/throws.mp4" }, 
+    "object": { "text": "pie", "mediaPath": "images/objects/pie.jpg" }, 
+    "fullSentence": "The clown throws a pie." 
+  },
+  { 
+    "subject": { "text": "teacher", "mediaPath": "images/subjects/teacher.jpg" }, 
+    "verb": { "text": "reads", "mediaPath": "videos/verbs/reads.mp4" }, 
+    "object": { "text": "book", "mediaPath": "images/objects/book.jpg" }, 
+    "fullSentence": "The teacher reads a book." 
+  },
+  { 
+    "subject": { "text": "robot", "mediaPath": "images/subjects/robot.jpg" }, 
+    "verb": { "text": "lifts", "mediaPath": "videos/verbs/lifts.mp4" }, 
+    "object": { "text": "box", "mediaPath": "images/objects/box.jpg" }, 
+    "fullSentence": "The robot lifts a box." 
+  },
+  { 
+    "subject": { "text": "girl", "mediaPath": "images/subjects/girl.jpg" }, 
+    "verb": { "text": "hugs", "mediaPath": "videos/verbs/hugs.mp4" }, 
+    "object": { "text": "doll", "mediaPath": "images/objects/doll.jpg" }, 
+    "fullSentence": "The girl hugs her doll." 
+  },
+  { 
+    "subject": { "text": "man", "mediaPath": "images/subjects/man.jpg" }, 
+    "verb": { "text": "eats", "mediaPath": "videos/verbs/eats.mp4" }, 
+    "object": { "text": "sandwich", "mediaPath": "images/objects/sandwich.jpg" }, 
+    "fullSentence": "The man eats a sandwich." 
+  },
+  { 
+    "subject": { "text": "monkey", "mediaPath": "images/subjects/monkey.jpg" }, 
+    "verb": { "text": "climbs", "mediaPath": "videos/verbs/climbs.mp4" }, 
+    "object": { "text": "tree", "mediaPath": "images/objects/tree.jpg" }, 
+    "fullSentence": "The monkey climbs a tree." 
+  },
+  { 
+    "subject": { "text": "fish", "mediaPath": "images/subjects/fish.jpg" }, 
+    "verb": { "text": "swims", "mediaPath": "videos/verbs/swims.mp4" }, 
+    "object": { "text": "water", "mediaPath": "images/objects/water.jpg" }, 
+    "fullSentence": "The fish swims in water." 
+  },
+  { 
+    "subject": { "text": "child", "mediaPath": "images/subjects/child.jpg" }, 
+    "verb": { "text": "builds", "mediaPath": "videos/verbs/builds.mp4" }, 
+    "object": { "text": "tower", "mediaPath": "images/objects/tower.jpg" }, 
+    "fullSentence": "The child builds a tower." 
+  },
+  { 
+    "subject": { "text": "rabbit", "mediaPath": "images/subjects/rabbit.jpg" }, 
+    "verb": { "text": "eats", "mediaPath": "videos/verbs/eats.mp4" }, 
+    "object": { "text": "carrot", "mediaPath": "images/objects/carrot.jpg" }, 
+    "fullSentence": "The rabbit eats a carrot." 
+  },
+  { 
+    "subject": { "text": "lion", "mediaPath": "images/subjects/lion.jpg" }, 
+    "verb": { "text": "roars", "mediaPath": "videos/verbs/roars.mp4" }, 
+    "object": { "text": "zoo", "mediaPath": "images/objects/zoo.jpg" }, 
+    "fullSentence": "The lion roars at the zoo." 
+  },
+  { 
+    "subject": { "text": "duck", "mediaPath": "images/subjects/duck.jpg" }, 
+    "verb": { "text": "splashes", "mediaPath": "videos/verbs/splashes.mp4" }, 
+    "object": { "text": "water", "mediaPath": "images/objects/water.jpg" }, 
+    "fullSentence": "The duck splashes water." 
+  },
+  { 
+    "subject": { "text": "boy", "mediaPath": "images/subjects/boy.jpg" }, 
+    "verb": { "text": "throws", "mediaPath": "videos/verbs/throws.mp4" }, 
+    "object": { "text": "ball", "mediaPath": "images/objects/ball.jpg" }, 
+    "fullSentence": "The boy throws a ball." 
+  },
+  { 
+    "subject": { "text": "girl", "mediaPath": "images/subjects/girl.jpg" }, 
+    "verb": { "text": "opens", "mediaPath": "videos/verbs/opens.mp4" }, 
+    "object": { "text": "box", "mediaPath": "images/objects/box.jpg" }, 
+    "fullSentence": "The girl opens the box." 
+  },
+  { 
+    "subject": { "text": "horse", "mediaPath": "images/subjects/horse.jpg" }, 
+    "verb": { "text": "pulls", "mediaPath": "videos/verbs/pulls.mp4" }, 
+    "object": { "text": "cart", "mediaPath": "images/objects/cart.jpg" }, 
+    "fullSentence": "The horse pulls a cart." 
+  },
+  { 
+    "subject": { "text": "baby", "mediaPath": "images/subjects/baby.jpg" }, 
+    "verb": { "text": "drops", "mediaPath": "videos/verbs/drops.mp4" }, 
+    "object": { "text": "spoon", "mediaPath": "images/objects/spoon.jpg" }, 
+    "fullSentence": "The baby drops the spoon." 
+  },
+  { 
+    "subject": { "text": "dog", "mediaPath": "images/subjects/dog.jpg" }, 
+    "verb": { "text": "licks", "mediaPath": "videos/verbs/licks.mp4" }, 
+    "object": { "text": "paw", "mediaPath": "images/objects/paw.jpg" }, 
+    "fullSentence": "The dog licks his paw." 
+  },
+  { 
+    "subject": { "text": "chef", "mediaPath": "images/subjects/chef.jpg" }, 
+    "verb": { "text": "stirs", "mediaPath": "videos/verbs/stirs.mp4" }, 
+    "object": { "text": "soup", "mediaPath": "images/objects/soup.jpg" }, 
+    "fullSentence": "The chef stirs the soup." 
+  },
+  { 
+    "subject": { "text": "bear", "mediaPath": "images/subjects/bear.jpg" }, 
+    "verb": { "text": "climbs", "mediaPath": "videos/verbs/climbs.mp4" }, 
+    "object": { "text": "hill", "mediaPath": "images/objects/hill.jpg" }, 
+    "fullSentence": "The bear climbs the hill." 
+  },
+  { 
+    "subject": { "text": "girl", "mediaPath": "images/subjects/girl.jpg" }, 
+    "verb": { "text": "feeds", "mediaPath": "videos/verbs/feeds.mp4" }, 
+    "object": { "text": "cat", "mediaPath": "images/objects/cat.jpg" }, 
+    "fullSentence": "The girl feeds the cat." 
+  },
+  { 
+    "subject": { "text": "pirate", "mediaPath": "images/subjects/pirate.jpg" }, 
+    "verb": { "text": "finds", "mediaPath": "videos/verbs/finds.mp4" }, 
+    "object": { "text": "treasure", "mediaPath": "images/objects/treasure.jpg" }, 
+    "fullSentence": "The pirate finds a treasure." 
+  },
+  { 
+    "subject": { "text": "truck", "mediaPath": "images/subjects/truck.jpg" }, 
+    "verb": { "text": "carries", "mediaPath": "videos/verbs/carries.mp4" }, 
+    "object": { "text": "logs", "mediaPath": "images/objects/logs.jpg" }, 
+    "fullSentence": "The truck carries logs." 
+  }
+]
