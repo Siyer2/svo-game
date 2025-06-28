@@ -20,11 +20,21 @@ function shuffle(arr) {
 const wordBankEl = document.getElementById('word-bank');
 const imgEl = document.getElementById('word-image');
 const sentenceEl = document.getElementById('sentence');
+const feedbackEl = document.getElementById('feedback');
 
 let data = [];
 let stage = 0; // 0 subject,1 verb,2 object
 let index = 0;
 let subjects = [], verbs = [], objects = [];
+
+function showFeedback(message, positive) {
+  feedbackEl.textContent = message;
+  feedbackEl.className = positive ? 'positive' : 'negative';
+  setTimeout(() => {
+    feedbackEl.textContent = '';
+    feedbackEl.className = '';
+  }, 1000);
+}
 
 function updateWordBank() {
   wordBankEl.innerHTML = '';
@@ -40,7 +50,7 @@ function updateWordBank() {
   wordsToShow.forEach(word => {
     const btn = document.createElement('button');
     btn.textContent = word;
-    btn.addEventListener('click', () => handleSelect(word));
+    btn.addEventListener('click', (e) => handleSelect(word, e.target));
     wordBankEl.appendChild(btn);
   });
 }
@@ -80,10 +90,13 @@ function revealSentence() {
   sentenceEl.textContent = displaySentence;
 }
 
-function handleSelect(word) {
+function handleSelect(word, btn) {
   const entry = currentEntry();
   const expected = stage === 0 ? entry.subject.text : stage === 1 ? entry.verb.text : entry.object.text;
   if (word === expected) {
+    btn.classList.add('correct');
+    showFeedback('Great job!', true);
+    setTimeout(() => btn.classList.remove('correct'), 500);
     stage++;
     if (stage > 2) {
       // completed this entry
@@ -100,6 +113,10 @@ function handleSelect(word) {
       updateWordBank();
       revealSentence();
     }
+  } else {
+    btn.classList.add('wrong');
+    showFeedback('Try again!', false);
+    setTimeout(() => btn.classList.remove('wrong'), 500);
   }
 }
 
